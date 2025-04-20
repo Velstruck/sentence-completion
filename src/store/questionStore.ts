@@ -13,7 +13,7 @@ export const useQuestionStore = create<QuestionState>((set) => ({
   fetchQuestions: async () => {
     set({ isLoading: true });
     try {
-      const response = await fetch(`https://run.mocky.io/v3/${import.meta.env.VITE_MOCKY_SECRET}`);
+      const response = await fetch(`https://run.mocky.io/v3/be2c33e2-281d-4ac8-b526-4305b1aa8cd6`); // test for mock API (not secured)
       const data = await response.json();
       set({ questions: data.data.questions, isLoading: false });
     } catch (error) {
